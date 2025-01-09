@@ -33,7 +33,7 @@ const IncidentList = ({ incidents, onDelete, setIncidentsData }) => {
     const updatedIncident = { title: updatedTitle, description: updatedDescription, status: updatedStatus };
 
     try {
-      const response = await fetch(`http://localhost:10000/api/incidents/${incidentToUpdate._id}`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/incidents/${incidentToUpdate._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ const IncidentList = ({ incidents, onDelete, setIncidentsData }) => {
     // if (!window.confirm("Are you sure you want to delete this incident?")) return;
 
     try {
-      const response = await fetch(`http://localhost:10000/api/incidents/${incidentId}`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/incidents/${incidentId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
