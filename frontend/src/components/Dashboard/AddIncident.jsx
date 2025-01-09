@@ -55,7 +55,7 @@ const AddIncident = () => {
     setError('');
     setSuccess('');
     try {
-      const response = await fetch('http://localhost:8000/api/incidents', {
+      const response = await fetch('http://localhost:10000/api/incidents', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

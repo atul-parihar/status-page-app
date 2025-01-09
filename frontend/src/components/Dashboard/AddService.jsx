@@ -18,7 +18,7 @@ const AddService = () => {
     setError('');
     setSuccess('');
     try {
-      const response = await fetch('http://localhost:8000/api/services', {
+      const response = await fetch('http://localhost:10000/api/services', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
