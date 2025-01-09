@@ -1,6 +1,8 @@
+const API_BASE_URL = 'http://localhost:8000/api';
+
 export const fetchServices = async () => {
   try {
-    const response = await fetch(`${process.env.API_BASE_URL}/services`, {
+    const response = await fetch(`${API_BASE_URL}/services`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -22,7 +24,7 @@ export const fetchServices = async () => {
 
 export const fetchIncidents = async () => {
   try {
-    const response = await fetch(`${process.env.API_BASE_URL}/incidents`, {
+    const response = await fetch(`${API_BASE_URL}/incidents`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -45,7 +47,7 @@ export const fetchIncidents = async () => {
 // Fetch services without Authorization
 export const fetchServicesWithoutAuth = async () => {
   try {
-    const response = await fetch(`${process.env.API_BASE_URL}/services/public`, {
+    const response = await fetch(`${API_BASE_URL}/services/public`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -67,7 +69,7 @@ export const fetchServicesWithoutAuth = async () => {
 // Fetch incidents without Authorization
 export const fetchIncidentsWithoutAuth = async () => {
   try {
-    const response = await fetch(`${process.env.API_BASE_URL}/incidents/public`, {
+    const response = await fetch(`${API_BASE_URL}/incidents/public`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
