@@ -18,7 +18,7 @@ const AddService = () => {
     setError('');
     setSuccess('');
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/services`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/services`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

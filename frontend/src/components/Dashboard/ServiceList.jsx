@@ -77,7 +77,7 @@ const ServiceList = ({ services, setServicesData }) => {
     // if (!window.confirm("Are you sure you want to delete this service?")) return;
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/services/${serviceId}`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/services/${serviceId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

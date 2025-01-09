@@ -55,7 +55,7 @@ const AddIncident = () => {
     setError('');
     setSuccess('');
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/incidents`, {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/incidents`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
