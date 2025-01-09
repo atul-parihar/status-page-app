@@ -29,7 +29,7 @@ const ServiceList = ({ services, setServicesData }) => {
 
     const updatedService = { name: updatedName, status: updatedStatus };
     try {
-      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/services/${serviceToUpdate._id}`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/services/${serviceToUpdate._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
