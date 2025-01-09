@@ -16,6 +16,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
+      console.log(process.env.REACT_APP_BACKEND_URL);
       const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/auth/login`, { email, password });
 
       const { token, user } = response.data;
