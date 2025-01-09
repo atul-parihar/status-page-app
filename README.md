@@ -13,7 +13,8 @@ https://status-page-app-4.onrender.com
 ### Frontend
 The frontend is hosted at:
 ```
-https://incomparable-crepe-458e36.netlify.app/
+https://amazing-souffle-b75e83.netlify.app/
+
 ```
 
 ## General Walkthrough
