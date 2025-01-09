@@ -84,7 +84,7 @@ Here are pre-existing users for testing purposes:
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/atul-parihar/status-page-app
 cd status-page-app
 ```
 
