@@ -37,7 +37,7 @@ const updateService = async (req, res) => {
 
     try {
         const service = await Service.findOneAndUpdate(
-            { _id: id, createdBy: req.user.id },
+            { _id: id },
             { name, status },
             { new: true, runValidators: true }
         );
@@ -54,7 +54,6 @@ const updateService = async (req, res) => {
 
 const deleteService = async (req, res) => {
     const { id } = req.params;
-    console.log(id);
     try {
         // First, delete the related incidents
         await Incident.deleteMany({ associatedService: id });

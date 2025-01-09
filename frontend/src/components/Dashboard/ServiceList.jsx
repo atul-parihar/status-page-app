@@ -18,7 +18,6 @@ const ServiceList = ({ services, setServicesData }) => {
   const [updatedName, setUpdatedName] = useState('');
   const [updatedStatus, setUpdatedStatus] = useState('');
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-
   // Handle updating service
   const handleServiceUpdate = async (e) => {
     e.preventDefault();
@@ -29,13 +28,11 @@ const ServiceList = ({ services, setServicesData }) => {
     }
 
     const updatedService = { name: updatedName, status: updatedStatus };
-
     try {
       const response = await fetch(`http://localhost:8000/api/services/${serviceToUpdate._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
         },
         body: JSON.stringify(updatedService),
       });
@@ -84,7 +81,6 @@ const ServiceList = ({ services, setServicesData }) => {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },
       });
 

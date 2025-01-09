@@ -15,7 +15,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { fetchIncidentsWithoutAuth } from '@/utils/api';
 
 const IncidentList = ({ incidents, onDelete, setIncidentsData }) => {
-  console.log("incidents: ", incidents);
 
   const [incidentToUpdate, setIncidentToUpdate] = useState(null);  // Track the incident being updated
   const [updatedTitle, setUpdatedTitle] = useState("");
@@ -38,7 +37,6 @@ const IncidentList = ({ incidents, onDelete, setIncidentsData }) => {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
         },
         body: JSON.stringify(updatedIncident),
       });
@@ -50,7 +48,7 @@ const IncidentList = ({ incidents, onDelete, setIncidentsData }) => {
       }
 
       const updatedIncidentData = await response.json();
-      console.log("updatedIncidentData", updatedIncidentData);
+      
       // Optimistic Update: Update the incident in local state
       setIncidentsData((prevIncidents) =>
         prevIncidents.map((incident) =>
@@ -86,7 +84,6 @@ const IncidentList = ({ incidents, onDelete, setIncidentsData }) => {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("authToken")}`,
         },
       });
 

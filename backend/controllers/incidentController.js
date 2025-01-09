@@ -39,7 +39,7 @@ const updateIncident = async (req, res) => {
 
     try {
         const incident = await Incident.findOneAndUpdate(
-            { _id: id, createdBy: req.user.id },
+            { _id: id },
             { title, description, status },
             { new: true, runValidators: true }
         );

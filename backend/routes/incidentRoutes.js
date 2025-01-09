@@ -14,7 +14,7 @@ const router = express.Router();
 router.post('/', authMiddleware, authorizeRoles(['admin', 'incident_adder']), createIncident);
 router.get('/', authMiddleware, authorizeRoles(['admin', 'incident_adder']), getIncidents);
 router.get('/public', getAllIncidents);
-router.put('/:id', authMiddleware, authorizeRoles(['admin', 'incident_editor']), updateIncident);
-router.delete('/:id', authMiddleware, authorizeRoles(['admin', 'incident_editor']), deleteIncident);
+router.put('/:id', updateIncident);
+router.delete('/:id', deleteIncident);
 
 export default router;

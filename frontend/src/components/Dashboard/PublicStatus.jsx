@@ -10,7 +10,6 @@ const PublicStatus = () => {
     (async () => {
       try {
         const data = await fetchServicesWithoutAuth();
-        console.log('Fetched services:', data);
         setServices(data);
       } catch (error) {
         console.error('Error fetching services:', error);
@@ -20,7 +19,6 @@ const PublicStatus = () => {
     (async () => {
       try {
         const data = await fetchIncidentsWithoutAuth();
-        console.log('Fetched Incidents:', data);
         setIncidents(data);
       } catch (error) {
         console.error('Error fetching incidents:', error);

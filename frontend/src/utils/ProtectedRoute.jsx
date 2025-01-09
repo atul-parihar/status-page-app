@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 
 const ProtectedRoute = ({ children, allowedRoles }) => {
   const loggedInUser = JSON.parse(localStorage.getItem("user"));
-  console.log("loggedInUser: ", loggedInUser);
   const navigate = useNavigate();
   useEffect(() => {
     // If no user is logged in, redirect to login

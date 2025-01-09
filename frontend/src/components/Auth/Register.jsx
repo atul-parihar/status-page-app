@@ -18,7 +18,7 @@ const Register = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
+  
   const handleRegister = async (e) => {
     e.preventDefault();
     try {

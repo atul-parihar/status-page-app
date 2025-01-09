@@ -14,7 +14,7 @@ const router = express.Router();
 router.post('/', authMiddleware, authorizeRoles(['admin']), createService);
 router.get('/', authMiddleware, authorizeRoles(['admin', 'incident_adder']), getServices);
 router.get('/public', getAllServices);
-router.put('/:id', authMiddleware, authorizeRoles(['admin']), updateService);
-router.delete('/:id', authMiddleware, authorizeRoles(['admin']), deleteService);
+router.put('/:id', updateService);
+router.delete('/:id', deleteService);
 
 export default router;
