@@ -2,7 +2,7 @@
 
 export const fetchServices = async () => {
   try {
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/services`, {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/services`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export const fetchServices = async () => {
 
 export const fetchIncidents = async () => {
   try {
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/incidents`, {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/incidents`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ export const fetchIncidents = async () => {
 // Fetch services without Authorization
 export const fetchServicesWithoutAuth = async () => {
   try {
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/services/public`, {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/services/public`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ export const fetchServicesWithoutAuth = async () => {
 // Fetch incidents without Authorization
 export const fetchIncidentsWithoutAuth = async () => {
   try {
-    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/incidents/public`, {
+    const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/incidents/public`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

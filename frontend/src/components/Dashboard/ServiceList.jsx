@@ -29,7 +29,7 @@ const ServiceList = ({ services, setServicesData }) => {
 
     const updatedService = { name: updatedName, status: updatedStatus };
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/services/${serviceToUpdate._id}`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/services/${serviceToUpdate._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ const ServiceList = ({ services, setServicesData }) => {
     // if (!window.confirm("Are you sure you want to delete this service?")) return;
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/services/${serviceId}`, {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/services/${serviceId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
