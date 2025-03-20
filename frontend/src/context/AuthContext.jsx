@@ -16,7 +16,6 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      // console.log(import.meta.env.REACT_APP_BACKEND_URL);
       console.log(import.meta.env.VITE_BACKEND_URL);
       const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, { email, password });
       console.log(response);

@@ -6,7 +6,7 @@ import authRoutes from './routes/authRoutes.js';
 import serviceRoutes from './routes/serviceRoutes.js';
 import incidentRoutes from './routes/incidentRoutes.js';
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 8000;
 
 dotenv.config();
 
